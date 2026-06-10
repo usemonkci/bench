@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   base_setup:
-    runs-on: monkci-ubuntu-24.04-32
+    runs-on: ubuntu-latest
     timeout-minutes: 60
 
     strategy:
@@ -52,7 +52,7 @@ jobs:
       - run: python ${GITHUB_WORKSPACE}/bench/tests/test_init.py TestBenchInit.basic
 
   production_setup:
-    runs-on: monkci-ubuntu-24.04-32
+    runs-on: ubuntu-latest
     timeout-minutes: 60
 
     strategy:
@@ -88,7 +88,7 @@ jobs:
       - run: python bench/tests/test_setup_production.py TestSetupProduction.production
 
   tests:
-    runs-on: monkci-ubuntu-24.04-32
+    runs-on: ubuntu-latest
     timeout-minutes: 60
 
     strategy:
